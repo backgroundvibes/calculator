@@ -8,10 +8,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     margin: 100px;
     border: solid darkgreen;
     width: 150px;
-    height: 200px;
+    height: 190px;
+    padding: 5px;
 
 }
 
@@ -31,15 +33,15 @@ body {
     justify-content: center;
     width: 100px;
     flex-wrap: wrap;
-    border: solid black 2px;
+    border: 2px solid white;
 }
 
 .operators {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    border: 2px solid black;
     align-content: flex-end;
+    border: 2px solid white;
 }
 
 #equals {
