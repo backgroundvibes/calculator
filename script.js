@@ -25,6 +25,15 @@ numButtons.forEach(button => {
     button.addEventListener("click", (event) => {
         display.textContent += event.target.textContent
         num1 += event.target.textContent
-        console.log(num1)
+        console.log(num1)  
     })
+})
+
+let reset = document.querySelector("#reset")
+
+reset.addEventListener("click", () => {
+    display.textContent = ""
+    num1 = []
+    num2 = []
+    operator = ""
 })
