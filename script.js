@@ -20,7 +20,13 @@ function calc(num1, num2, operator) {
     } else if (operator == multiplicationSymbol) {
         return firstNum * secondNum
     } else if (operator == divisionSymbol) {
-        return firstNum / secondNum
+        if (secondNum == 0) {
+            alert("Oi! No dividing by zero!")
+            operator = ""
+            return ""
+        } else {
+            return firstNum / secondNum
+        }
     }
 }
 
@@ -82,6 +88,8 @@ equals.addEventListener("click", () => {
             operator = ""
             displayText = ""
             displayText2 = ""
+        } else {
+            alert("Oi! No dividing by zero!")
         }
     }
 })
