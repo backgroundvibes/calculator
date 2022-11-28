@@ -90,6 +90,12 @@ equals.addEventListener("click", () => {
             displayText2 = ""
         } else {
             alert("Oi! No dividing by zero!")
+            display.textContent = ""
+            num1 = []
+            num2 = []
+            operator = ""
+            displayText = ""
+            displayText2 = ""
         }
     }
 })
