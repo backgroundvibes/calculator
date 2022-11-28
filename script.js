@@ -71,3 +71,17 @@ opButtons.forEach(button => {
         }
     })
 })
+
+let equals = document.querySelector("#equals")
+equals.addEventListener("click", () => {
+    if (num1 != 0) {
+        if (num2 != 0) {
+            display.textContent = calc(num1, num2, operator)
+            num1 = []
+            num2 = []
+            operator = ""
+            displayText = ""
+            displayText2 = ""
+        }
+    }
+})
