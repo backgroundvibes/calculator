@@ -11,33 +11,17 @@ let divisionSymbol = document.querySelector("#divide").textContent
 
 
 function calc(num1, num2, operator) {
+    let firstNum = parseInt(num1.toString(), 10)
+    let secondNum = parseInt(num2.toString(), 10)
     if (operator == plusSymbol) {
-        let firstNum = parseInt(num1.toString(), 10)
-        let secondNum = parseInt(num2.toString(), 10)
         return firstNum + secondNum
     } else if (operator == subtractionSymbol) {
-        subtract(num1, num2, operator)
+        return firstNum - secondNum
     } else if (operator == multiplicationSymbol) {
-        multiply(num1, num2, operator)
+        return firstNum * secondNum
     } else if (operator == divisionSymbol) {
-        divide(num1, num2, operator)
+        return firstNum / secondNum
     }
-}
-
-function plus(num1, num2, operator) {
-    console.log("Plus")
-}
-
-function subtract(num1, num2, operator) {
-    console.log("Subtract")
-}
-
-function multiply(num1, num2, operator) {
-    console.log("Multiply")
-}
-
-function divide(num1, num2, operator) {
-    console.log("Divide")
 }
 
 let display = document.querySelector(".display")
