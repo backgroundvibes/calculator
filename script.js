@@ -10,31 +10,33 @@ let multiplicationSymbol = document.querySelector("#multiply").textContent
 let divisionSymbol = document.querySelector("#divide").textContent
 
 
-function calc(operator) {
+function calc(num1, num2, operator) {
     if (operator == plusSymbol) {
-        plus()
+        let firstNum = parseInt(num1.toString(), 10)
+        let secondNum = parseInt(num2.toString(), 10)
+        return firstNum + secondNum
     } else if (operator == subtractionSymbol) {
-        subtract()
+        subtract(num1, num2, operator)
     } else if (operator == multiplicationSymbol) {
-        multiply()
+        multiply(num1, num2, operator)
     } else if (operator == divisionSymbol) {
-        divide()
+        divide(num1, num2, operator)
     }
 }
 
-function plus() {
+function plus(num1, num2, operator) {
     console.log("Plus")
 }
 
-function subtract() {
+function subtract(num1, num2, operator) {
     console.log("Subtract")
 }
 
-function multiply() {
+function multiply(num1, num2, operator) {
     console.log("Multiply")
 }
 
-function divide() {
+function divide(num1, num2, operator) {
     console.log("Divide")
 }
 
@@ -75,7 +77,12 @@ opButtons.forEach(button => {
                 display.textContent = displayText
                 operator = e.target.textContent
             } else {
-                calc(operator)
+                display.textContent = calc(num1, num2, operator) + e.target.textContent
+                num1 = calc(num1, num2, operator)
+                num2 = []
+                operator = e.target.textContent
+                displayText = ""
+                displayText2 = ""
             }
         }
     })
