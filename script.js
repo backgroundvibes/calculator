@@ -4,20 +4,38 @@ let operator = ""
 let displayText = ""
 let displayText2 = ""
 
-function plus() {
+let plusSymbol = document.querySelector("#plus").textContent
+let subtractionSymbol = document.querySelector("#subtract").textContent
+let multiplicationSymbol = document.querySelector("#multiply").textContent
+let divisionSymbol = document.querySelector("#divide").textContent
 
+
+function calc(operator) {
+    if (operator == plusSymbol) {
+        plus()
+    } else if (operator == subtractionSymbol) {
+        subtract()
+    } else if (operator == multiplicationSymbol) {
+        multiply()
+    } else if (operator == divisionSymbol) {
+        divide()
+    }
+}
+
+function plus() {
+    console.log("Plus")
 }
 
 function subtract() {
-
+    console.log("Subtract")
 }
 
 function multiply() {
-
+    console.log("Multiply")
 }
 
 function divide() {
-
+    console.log("Divide")
 }
 
 let display = document.querySelector(".display")
@@ -52,10 +70,13 @@ let opButtons = document.querySelectorAll(".operators")
 opButtons.forEach(button => {
     button.addEventListener("click", e => {
         if (num1 != 0) {
-            displayText = displayText + e.target.textContent
-            display.textContent = displayText
-            num1 = []
-            operator = e.target.textContent
+            if (operator === "") {
+                displayText = displayText + e.target.textContent
+                display.textContent = displayText
+                operator = e.target.textContent
+            } else {
+                calc(operator)
+            }
         }
     })
 })
