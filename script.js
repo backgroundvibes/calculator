@@ -18,19 +18,19 @@ function calc(num1, num2, operator) {
         let rawResult = firstNum + secondNum
         let chopped = rawResult.toString().split("", 15)
         let result = chopped.join("")
-        return parseInt(result, 10)
+        return result
 
     } else if (operator == subtractionSymbol) {
         let rawResult = firstNum - secondNum
         let chopped = rawResult.toString().split("", 15)
         let result = chopped.join("")
-        return parseInt(result, 10)
+        return result
 
     } else if (operator == multiplicationSymbol) {
         let rawResult = firstNum * secondNum
         let chopped = rawResult.toString().split("", 15)
         let result = chopped.join("")
-        return parseInt(result, 10)
+        return result
         
     } else if (operator == divisionSymbol) {
         if (secondNum == 0) {
@@ -41,7 +41,7 @@ function calc(num1, num2, operator) {
             let rawResult = firstNum / secondNum
             let chopped = rawResult.toString().split("", 15)
             let result = chopped.join("")
-            return parseInt(result, 10)
+            return result
         }
     }
 }
