@@ -13,19 +13,35 @@ let divisionSymbol = document.querySelector("#divide").textContent
 function calc(num1, num2, operator) {
     let firstNum = parseInt(num1.toString(), 10)
     let secondNum = parseInt(num2.toString(), 10)
+
     if (operator == plusSymbol) {
-        return firstNum + secondNum
+        let rawResult = firstNum + secondNum
+        let chopped = rawResult.toString().split("", 15)
+        let result = chopped.join("")
+        return parseInt(result, 10)
+
     } else if (operator == subtractionSymbol) {
-        return firstNum - secondNum
+        let rawResult = firstNum - secondNum
+        let chopped = rawResult.toString().split("", 15)
+        let result = chopped.join("")
+        return parseInt(result, 10)
+
     } else if (operator == multiplicationSymbol) {
-        return firstNum * secondNum
+        let rawResult = firstNum * secondNum
+        let chopped = rawResult.toString().split("", 15)
+        let result = chopped.join("")
+        return parseInt(result, 10)
+        
     } else if (operator == divisionSymbol) {
         if (secondNum == 0) {
             alert("Oi! No dividing by zero!")
             operator = ""
             return ""
         } else {
-            return firstNum / secondNum
+            let rawResult = firstNum / secondNum
+            let chopped = rawResult.toString().split("", 15)
+            let result = chopped.join("")
+            return parseInt(result, 10)
         }
     }
 }
